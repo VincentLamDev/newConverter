@@ -12,6 +12,10 @@
 		BF397D631E57AF100044B50B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF397D611E57AF100044B50B /* Main.storyboard */; };
 		BF397D651E57AF100044B50B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF397D641E57AF100044B50B /* Assets.xcassets */; };
 		BF397D681E57AF100044B50B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF397D661E57AF100044B50B /* LaunchScreen.storyboard */; };
+		BF397D701E57AF820044B50B /* DistanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF397D6F1E57AF820044B50B /* DistanceViewController.swift */; };
+		BF397D721E57B37E0044B50B /* DistanceConversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF397D711E57B37E0044B50B /* DistanceConversions.swift */; };
+		BF397D761E57C3190044B50B /* TemperatureConversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF397D751E57C3190044B50B /* TemperatureConversions.swift */; };
+		BF397D7C1E57D4920044B50B /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF397D7B1E57D4920044B50B /* TempViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		BF397D641E57AF100044B50B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF397D671E57AF100044B50B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF397D691E57AF100044B50B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF397D6F1E57AF820044B50B /* DistanceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceViewController.swift; sourceTree = "<group>"; };
+		BF397D711E57B37E0044B50B /* DistanceConversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistanceConversions.swift; sourceTree = "<group>"; };
+		BF397D751E57C3190044B50B /* TemperatureConversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TemperatureConversions.swift; sourceTree = "<group>"; };
+		BF397D7B1E57D4920044B50B /* TempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +65,13 @@
 				BF397D5D1E57AF100044B50B /* AppDelegate.swift */,
 				BF397D5F1E57AF100044B50B /* ViewController.swift */,
 				BF397D611E57AF100044B50B /* Main.storyboard */,
+				BF397D751E57C3190044B50B /* TemperatureConversions.swift */,
+				BF397D711E57B37E0044B50B /* DistanceConversions.swift */,
 				BF397D641E57AF100044B50B /* Assets.xcassets */,
 				BF397D661E57AF100044B50B /* LaunchScreen.storyboard */,
 				BF397D691E57AF100044B50B /* Info.plist */,
+				BF397D6F1E57AF820044B50B /* DistanceViewController.swift */,
+				BF397D7B1E57D4920044B50B /* TempViewController.swift */,
 			);
 			path = OneConverter;
 			sourceTree = "<group>";
@@ -136,8 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF397D721E57B37E0044B50B /* DistanceConversions.swift in Sources */,
 				BF397D601E57AF100044B50B /* ViewController.swift in Sources */,
+				BF397D7C1E57D4920044B50B /* TempViewController.swift in Sources */,
 				BF397D5E1E57AF100044B50B /* AppDelegate.swift in Sources */,
+				BF397D701E57AF820044B50B /* DistanceViewController.swift in Sources */,
+				BF397D761E57C3190044B50B /* TemperatureConversions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
