@@ -14,7 +14,7 @@ enum TempUnits: Int {
     static func allCases() -> [String] {
         var i = 0
         var list = [String]()
-        while let unit = Unit(rawValue: i) {
+        while let unit = TempUnits(rawValue: i) {
             list.append(unit.description())
             i = i + 1
         }
