@@ -20,7 +20,8 @@ class TempViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         
         tempOutputPicker.delegate = self
         tempOutputPicker.dataSource = self
-        
+        tempOutputPicker.selectRow(1, inComponent: 0, animated: false)
+
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TempViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         

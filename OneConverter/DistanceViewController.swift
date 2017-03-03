@@ -30,7 +30,8 @@ class DistanceViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         outputPicker.delegate = self
         outputPicker.dataSource = self
-        
+        outputPicker.selectRow(1, inComponent: 0, animated: false)
+
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(DistanceViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }

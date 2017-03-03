@@ -16,7 +16,7 @@ class VolumeViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     @IBOutlet weak var volumeOutputField: UITextField!
     @IBOutlet weak var volumeInputPicker: UIPickerView!
     @IBOutlet weak var volumeOutputPicker: UIPickerView!
-    let tempList = TempUnits.allCases()
+    let volumeList = VolumeUnits.allCases()
 
     
     override func viewDidLoad() {
@@ -27,7 +27,8 @@ class VolumeViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         volumeOutputPicker.delegate = self
         volumeOutputPicker.dataSource = self
-        
+        volumeOutputPicker.selectRow(1, inComponent: 0, animated: false)
+
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(VolumeViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
         
@@ -50,19 +51,19 @@ class VolumeViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return tempList.count
+        return volumeList.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return tempList[row]
+        return volumeList[row]
     }
     
     @IBAction func convertVolume(_ sender: UIButton) {
         let fromUnitIdx = volumeInputPicker.selectedRow(inComponent: 0)
         let toUnitIdx = volumeOutputPicker.selectedRow(inComponent: 0)
         
-        let fromUnit = TempUnits.fromString(tempList[fromUnitIdx])!
-        let toUnit = TempUnits.fromString(tempList[toUnitIdx])!
+        let fromUnit = VolumeUnits.fromString(volumeList[fromUnitIdx])!
+        let toUnit = VolumeUnits.fromString(volumeList[toUnitIdx])!
         
         if let inputText = volumeInputField.text {
             if !inputText.isEmpty {
@@ -75,6 +76,7 @@ class VolumeViewController: UIViewController, UIPickerViewDelegate, UIPickerView
     
     
     @IBAction func resetField(_ sender: UIButton) {
+        volumeInputField.text = ""
     }
     
     

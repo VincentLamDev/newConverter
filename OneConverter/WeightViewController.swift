@@ -27,6 +27,7 @@ class WeightViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         weightOutputPicker.delegate = self
         weightOutputPicker.dataSource = self
+        weightOutputPicker.selectRow(1, inComponent: 0, animated: false)
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(WeightViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)

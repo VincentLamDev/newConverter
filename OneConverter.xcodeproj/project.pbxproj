@@ -11,6 +11,7 @@
 		84A86A2A1E62369A00D0957F /* WeightConversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A291E62369A00D0957F /* WeightConversions.swift */; };
 		84A86A2C1E62412300D0957F /* VolumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A2B1E62412300D0957F /* VolumeViewController.swift */; };
 		84A86A2E1E62413500D0957F /* VolumeConversions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A86A2D1E62413500D0957F /* VolumeConversions.swift */; };
+		84E2983D1E68E1DC00475044 /* CurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84E2983C1E68E1DC00475044 /* CurrencyViewController.swift */; };
 		BF397D5E1E57AF100044B50B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF397D5D1E57AF100044B50B /* AppDelegate.swift */; };
 		BF397D601E57AF100044B50B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF397D5F1E57AF100044B50B /* ViewController.swift */; };
 		BF397D631E57AF100044B50B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF397D611E57AF100044B50B /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		84A86A291E62369A00D0957F /* WeightConversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeightConversions.swift; sourceTree = "<group>"; };
 		84A86A2B1E62412300D0957F /* VolumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeViewController.swift; sourceTree = "<group>"; };
 		84A86A2D1E62413500D0957F /* VolumeConversions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VolumeConversions.swift; sourceTree = "<group>"; };
+		84E2983C1E68E1DC00475044 /* CurrencyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrencyViewController.swift; sourceTree = "<group>"; };
 		BF397D5A1E57AF100044B50B /* OneConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF397D5D1E57AF100044B50B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF397D5F1E57AF100044B50B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 				84A86A291E62369A00D0957F /* WeightConversions.swift */,
 				84A86A2B1E62412300D0957F /* VolumeViewController.swift */,
 				84A86A2D1E62413500D0957F /* VolumeConversions.swift */,
+				84E2983C1E68E1DC00475044 /* CurrencyViewController.swift */,
 			);
 			path = OneConverter;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				BF397D701E57AF820044B50B /* DistanceViewController.swift in Sources */,
 				84A86A2E1E62413500D0957F /* VolumeConversions.swift in Sources */,
 				84A86A281E622B1F00D0957F /* WeightViewController.swift in Sources */,
+				84E2983D1E68E1DC00475044 /* CurrencyViewController.swift in Sources */,
 				BF397D761E57C3190044B50B /* TemperatureConversions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
