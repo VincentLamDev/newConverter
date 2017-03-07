@@ -23,9 +23,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha:0.95)
-            
-            //UIColor(red: 200, green: 200, blue: 200,alpha:0.5)
-        
+                    
         let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
         
@@ -43,42 +41,27 @@ class ViewController: UIViewController {
         homeTitle.baselineAdjustment = .alignCenters
         homeTitle.textColor = UIColor.black
         
-        distanceButton.frame.size.width = btnWidth
-        distanceButton.frame.size.height = btnHeight
         distanceButton.frame.origin = CGPoint(x: column1X, y: screenHeight * 0.20)
         addImageToButton(button: distanceButton, imageName: "distance.png", btnHeight: btnHeight, btnWidth: btnWidth, title: "Distance")
-        distanceButton.backgroundColor = UIColor.white
         
-        tempButton.frame.size.width = btnWidth
-        tempButton.frame.size.height = btnHeight
         tempButton.frame.origin = CGPoint(x: column2X, y: btnHeight)
         addImageToButton(button: tempButton, imageName: "temp.png", btnHeight: btnHeight, btnWidth: btnWidth, title: "Temperature")
-        tempButton.backgroundColor = UIColor.white
 
-        weightButton.frame.size.width = btnWidth
-        weightButton.frame.size.height = btnHeight
         weightButton.frame.origin = CGPoint(x: column1X, y: btnHeight * 2 + verticalGap)
         addImageToButton(button: weightButton, imageName: "weight.png", btnHeight: btnHeight, btnWidth: btnWidth, title: "Weight")
-        weightButton.backgroundColor = UIColor.white
 
-        volumeButton.frame.size.width = btnWidth
-        volumeButton.frame.size.height = btnHeight
         volumeButton.frame.origin = CGPoint(x: column2X, y: btnHeight * 2 + verticalGap)
         addImageToButton(button: volumeButton, imageName: "volume.png", btnHeight: btnHeight, btnWidth: btnWidth, title: "Volume")
-        volumeButton.backgroundColor = UIColor.white
 
-        currencyButton.frame.size.width = btnWidth
-        currencyButton.frame.size.height = btnHeight
         currencyButton.frame.origin = CGPoint(x: column1X, y: btnHeight * 3 + verticalGap * 2)
         addImageToButton(button: currencyButton, imageName: "currency.png", btnHeight: btnHeight, btnWidth: btnWidth, title: "Currency")
-        currencyButton.backgroundColor = UIColor.white
 
         // Do any additional setup after loading the view, typically from a nib.
     }
 
     func addImageToButton(button: UIButton, imageName: String, btnHeight: CGFloat, btnWidth: CGFloat, title: String){
         let imageSize: CGFloat = btnHeight * 0.6
-        let borderSize : CGFloat = 2
+        let borderSize : CGFloat = 1
         let textHeight : CGFloat = btnHeight * 0.2
         let imageOrigin : CGFloat = btnHeight * 0.1
         let imageLeft : CGFloat = (btnWidth - imageSize)/2
@@ -87,8 +70,11 @@ class ViewController: UIViewController {
         let imageBottom : CGFloat = textBottom + textHeight
         
         //Border
+        button.frame.size.width = btnWidth
+        button.frame.size.height = btnHeight
         button.layer.borderColor = UIColor.black.cgColor
         button.layer.borderWidth = borderSize
+        button.backgroundColor = UIColor.white
         
         //Image
         let myImage = UIImage(named: imageName)

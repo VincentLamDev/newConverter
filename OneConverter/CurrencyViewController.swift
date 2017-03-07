@@ -15,10 +15,87 @@ class CurrencyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var myValues:[Double] = []
     var activeCurrency:Double = 0;
 
+    
+    
+    @IBOutlet weak var currencyFromLabel: UILabel!
+    @IBOutlet weak var currencyToLabel: UILabel!
     @IBOutlet weak var currencyInputField: UITextField!
     @IBOutlet weak var currencyOutputField: UITextField!
     @IBOutlet weak var currencyInputPicker: UIPickerView!
     @IBOutlet weak var currencyOutputPicker: UIPickerView!
+    
+    @IBOutlet weak var currencyConvertButton: UIButton!
+    @IBOutlet weak var currencyBackButton: UIButton!
+    @IBOutlet weak var currencyClearButton: UIButton!
+    
+    
+    func settngUpInterface(){
+        let xPos = self.view.frame.minX
+        let yPos = self.view.frame.minY
+        let width = self.view.frame.width
+        let height = self.view.frame.height
+        
+        currencyFromLabel.frame.origin = CGPoint(x: xPos + (width * 0.05), y: yPos + (height * 0.05))
+        currencyFromLabel.frame.size.width = width * 0.15
+        currencyFromLabel.frame.size.height = height * 0.05
+        currencyFromLabel.font = UIFont(name: currencyFromLabel.font.fontName, size: CGFloat(100))
+        currencyFromLabel.adjustsFontSizeToFitWidth = true
+        currencyFromLabel.baselineAdjustment = .alignCenters
+        
+        
+        currencyInputField.frame.size.width = width * 0.70
+        currencyInputField.frame.size.height = height * 0.05
+        currencyInputField.frame.origin = CGPoint(x: xPos + currencyFromLabel.frame.size.width + width * 0.1, y: yPos + (height * 0.05))
+        
+        
+        currencyInputPicker.frame.size.width = width * 0.5
+        currencyInputPicker.frame.size.height = height * 0.30
+        currencyInputPicker.frame.origin = CGPoint(x: xPos + width * 0.25, y: yPos + (height * 0.1))
+        
+        
+        currencyToLabel.frame.origin = CGPoint(x: xPos + (width * 0.05), y: yPos + (height * 0.50))
+        currencyToLabel.frame.size.width = width * 0.08
+        currencyToLabel.frame.size.height = height * 0.05
+        currencyToLabel.font = UIFont(name: currencyToLabel.font.fontName, size: CGFloat(100))
+        currencyToLabel.adjustsFontSizeToFitWidth = true
+        currencyToLabel.baselineAdjustment = .alignCenters
+        
+        
+        currencyOutputField.frame.size.width = width * 0.70
+        currencyOutputField.frame.size.height = height * 0.05
+        currencyOutputField.frame.origin = CGPoint(x: xPos + currencyFromLabel.frame.size.width + width * 0.10, y: yPos + (height * 0.50))
+        
+        
+        currencyOutputPicker.frame.size.width = width * 0.5
+        currencyOutputPicker.frame.size.height = height * 0.30
+        currencyOutputPicker.frame.origin = CGPoint(x: xPos + width * 0.25, y: yPos + (height * 0.55))
+        
+        let btnWidth = CGFloat(width * 0.22)
+        let btnHeight = CGFloat(height * 0.05)
+        
+        currencyConvertButton.frame.size.width = btnWidth
+        currencyConvertButton.frame.size.height = btnHeight
+        currencyConvertButton.layer.borderColor = UIColor.black.cgColor
+        currencyConvertButton.layer.borderWidth = 2
+        currencyConvertButton.backgroundColor = UIColor.white
+        currencyConvertButton.frame.origin = CGPoint(x: xPos + (width * 0.15), y: yPos + (height * 0.9))
+        
+        currencyBackButton.frame.size.width = btnWidth
+        currencyBackButton.frame.size.height = btnHeight
+        currencyBackButton.layer.borderColor = UIColor.black.cgColor
+        currencyBackButton.layer.borderWidth = 2
+        currencyBackButton.backgroundColor = UIColor.white
+        currencyBackButton.frame.origin = CGPoint(x: xPos + (width * 0.39), y: yPos + (height * 0.9))
+        
+        currencyClearButton.frame.size.width = btnWidth
+        currencyClearButton.frame.size.height = btnHeight
+        currencyClearButton.layer.borderColor = UIColor.black.cgColor
+        currencyClearButton.layer.borderWidth = 2
+        currencyClearButton.backgroundColor = UIColor.white
+        currencyClearButton.frame.origin = CGPoint(x: xPos + (width * 0.63), y: yPos + (height * 0.9))
+        
+    }
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int
     {
@@ -43,6 +120,10 @@ class CurrencyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        self.settngUpInterface()
+        self.view.backgroundColor = UIColor.orange
+
         currencyInputPicker.delegate = self
         currencyInputPicker.dataSource = self
         
